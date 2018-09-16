@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title> Todo List
+  </title>
+
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
+<style>
+	@-webkit-keyframes bg
+	{
+		0%{background-color:pink;opacity:1;}
+		20%{background-color:#5DADE2;}
+		40%{background-color:#E74C3C;}
+		60%{background-color:purple;}
+		80%{background-color:blue;}
+		100%{background-color:pink;}
+	}
+		@-webkit-keyframes bgi
+	{
+		0%{background-color:white;top:60px;left:60px;opacity:1;}
+		25%{background-color:white;top:60px;left:60px;}
+		50%{background-color:white;top:140px;left:140px;}
+		75%{background-color:white;top:140px;left:60px;}
+		100%{background-color:white;top:60px;left:60px;}
+	}
+	 #homei{
+	 	height: 350px;
+     background-color:#9B59B6;
+     -webkit-animation :bg 6s;
+     -webkit-animation-iteration-count:infinite;
+	 }
+
+	 #homei2{
+	 	float:right;
+	 }
+	 .w3-myfont {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+	</style>
+</head>
+<body style="padding: 0px 80px">
+<div id="home w3-myfont">
+<div  style="background-color: #F2F3F4" class="w3-bar"  w3-round-xlarge">
+
+	<h3>
+  <a href="#" class="w3-bar-item w3-btn w3-mobile"><i class="fa fa-bars" title="Menu"></i></a>
+  <a href="#home" class="w3-bar-item w3-btn w3-mobile" title="Home">Home</a>
+  <a href="#About" class="w3-bar-item w3-btn w3-mobile" title="About Us">About Us</a>
+  <a href="#signin" class="w3-bar-item w3-btn w3-mobile" title="Signup/SignIn">SignUp/SignIn</a>
+
+</div>
+<div id="homei" class="w3-display-container w3-card">
+	<div id="homei2" class="w3-container w3-text-white"><h1>Patient Record Keeper</h1></div>
+</div>
+</div>
+
+<br><br><br><br>
+ <div id="About" class="w3-center w3-myfont w3-padding-64 w3-circle w3-purple w3-hover-opacity" style="overflow:auto;clear: both;">
+
+ 		<div style="overflow:auto;padding: 60px" class=" w3-center w3-myfont"><h1>About Patient Record Keeper:</h1>
+
+ 		This website has been designed to preserve medical history of patients. For this we have used blockchain technology in order to have a chain of patients information that can be used only after patients consent.
+
+ 	</div>
+ </div>
+<!--Sign In Begins-->
+  <div id="signin">
+  	<div class="w3-card w3-panel w3-round-xlarge w3-teal "><h2 class="w3-animate-fading w3-myfont">Explore Us!!!</h2></div>
+  	<ul class="w3-ul w3-card-4 w3-myfont">
+     <li class="w3-bar">
+     	<img src="media/icon.png" style="float:left; width: 50px ; height: 50px" class="w3-circle">
+     	<button onClick='location.href="signup.html"' class="w3-btn w3-block w3-left-align  w3-hover-red" style="float: left ;width:70%;"><b>Sign Up</b></button>
+     </li>
+     <li class="w3-bar">
+     	<img src="media/icon.png" style="float:left;width: 50px ; height: 50px" class="w3-circle">
+     <button onClick='location.href="login.html"' class="w3-btn w3-block w3-left-align  w3-hover-red" style="float: left ;width:70%;"><b>Sign In</b></button>
+     </li>
+  	</ul>
+  	<!--form 1--
+  	<div id="form1" style="width:40%; background-color: #25C2FD;" class="w3-card w3-modal w3-display-container w3-half w3-round-xlarge w3-center ">
+	<span onClick="this.parentElement.style.display='none'" class="w3-btn w3-display-topright w3-teal w3-text-white">X</span>-->
+
+	<!--</div>-->
+<!--form 2
+<div id="form2" style="width:40%; background-color: #FD2553; display:'none'" class="w3-modal w3-card w3-display-container w3-half w3-round-xlarge w3-center">
+		<span onClick="this.parentElement.style.display='none'" class="w3-btn w3-display-topright w3-text-white">X</span>
+
+	</div> -->
+  </div>
+
+
+</body>
+</html>

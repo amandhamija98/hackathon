@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title> Todo List
+  </title>
+
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
+  </head>
+<body style="padding: 0px 80px">
+<div  style="background-color: #F2F3F4" class="w3-bar"  w3-round-xlarge">
+
+	<h3>
+  <a href="index.html" class="w3-bar-item w3-btn w3-mobile"><i class="fa fa-bars" title="Menu"></i></a>
+  <a href="index.html" class="w3-bar-item w3-btn w3-mobile" title="Home">Home</a>
+  <a href="index.html" class="w3-bar-item w3-btn w3-mobile" title="About Us">About Us</a>
+  <a href="index.html" class="w3-bar-item w3-btn w3-mobile" title="Signup/SignIn">SignUp/SignIn</a>
+
+</div>
+<header class="w3-teal w3-pannel w3-card w3-round-xlarge"><h2>Sign Up</h2></header>
+		<form  id="userForm" class="w3-container w3-animate-zoom"  action="#" method="POST">
+		<input class="w3-card w3-image w3-circle" type="image"  name="img" src="media/pwgirl.png">
+	<p><input class="w3-input  w3-round-xlarge " type="text"  placeholder="UserName" name="name" autocomplete="off" required autofocus /></p>
+	<p><input class="w3-input  w3-round-xlarge" type="password"  placeholder="Password" min="8" max="12" name="pass" required /></p>
+	<p> <select class="w3-select w3-round-xlarge" name="opt"  multiple>
+  <option value="" disabled selected>--Role---</option>
+  <option value="1">Insuranance Agent</option>
+  <option value="2">Patient</option>
+</select></p>
+	<p><input type="submit" value="submit" >
+	<input type="reset" value="Reset"></p>
+		</form>
+
+<script>
+$(document).ready(function(){
+$('#userForm').submit(function(){
+
+// show that something is loading
+$('#response').html("<b>Loading response...</b>");
+var sendinfo={
+  aman: "yes"
+};
+// Call ajax for pass data to other place
+console.log(sendinfo);
+$.ajax({
+type: 'POST',
+url: '/signup.html',
+data: $(this).serialize() // getting filed value in serialize form
+})
+.done(function(data){ // if getting done then call.
+
+// show the response
+  
+    }
+$('#response').html(data);
+
+})
+.fail(function() { // if fail then getting message
+
+// just in case posting your form failed
+alert( "Posting failed." );
+
+});
+
+// to prevent refreshing the whole page page
+return false;
+
+});
+});
+</script>
+
+</body>
+</html>
